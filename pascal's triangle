@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+void pascalsTriangle(int);
+            int main(){
+                int numberOfRows;
+                cout <<"Please enter the number of rows for Pascal's triangle: ";
+                cin >> numberOfRows;
+                pascalsTriangle(numberOfRows);
+                return 0;
+                }
+            void pascalsTriangle(int x)
+            {
+                for (int i = 0; i < x; i++)
+                    {
+                        int y = 1;
+                        for (int j = 0; j <= i; j++)
+                            {
+                                cout<<y<<" ";
+                                y=y*(i - j)/(j + 1);
+
+                            }
+                        cout<<endl;
+                    }
+            }
